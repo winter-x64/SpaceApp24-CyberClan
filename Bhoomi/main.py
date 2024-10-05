@@ -43,16 +43,16 @@ def index():
     folium_map = folium.Map(location=start_coords, zoom_start=12)
 
     # Example locations
-    locations = [
-        {"name": "Golden Gate Bridge", "coords": [37.8199, -122.4783]},
-        {"name": "Coit Tower", "coords": [37.8024, -122.4058]},
-        {"name": "Lombard Street", "coords": [37.8021, -122.4187]},
-        {"name": "Fisherman's Wharf", "coords": [37.8080, -122.4177]},
-    ]
+    # locations = [
+    #     {"name": "Golden Gate Bridge", "coords": [37.8199, -122.4783]},
+    #     {"name": "Coit Tower", "coords": [37.8024, -122.4058]},
+    #     {"name": "Lombard Street", "coords": [37.8021, -122.4187]},
+    #     {"name": "Fisherman's Wharf", "coords": [37.8080, -122.4177]},
+    # ]
 
     # Add markers for each location
-    for loc in locations:
-        folium.Marker(location=loc["coords"], popup=loc["name"]).add_to(folium_map)
+    # for loc in locations:
+    #     folium.Marker(location=loc["coords"], popup=loc["name"]).add_to(folium_map)
 
     # Save the map as an HTML file
     folium_map.save("templates/map.html")

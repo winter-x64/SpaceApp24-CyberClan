@@ -30,7 +30,7 @@
     </style>
   </head>
   <body>
-    <h1>Welcome to Your Web GIS Application</h1>
+    <h1>Welcome to Bhoomi</h1>
 
     <div id="map"></div>
 
@@ -56,9 +56,9 @@
       ];
 
       // Add markers to the map
-      locations.forEach(function (loc) {
-        L.marker(loc.coords).addTo(map).bindPopup(loc.name);
-      });
+      // locations.forEach(function (loc) {
+      //  L.marker(loc.coords).addTo(map).bindPopup(loc.name);
+      // });
 
       // Add search bar using Leaflet Control Geocoder
       var geocoder = L.Control.geocoder({
