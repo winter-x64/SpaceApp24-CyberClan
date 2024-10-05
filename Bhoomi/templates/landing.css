@@ -11,7 +11,7 @@ body {
 h1{
     font-family: 'Rubik Distressed', sans-serif;
     /* Apply to headings */
-    color: rgba(34, 78, 76, 255);
+    color: #144444;
 }
 span{
     color: #ac9b82;
