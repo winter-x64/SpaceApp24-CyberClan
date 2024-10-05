@@ -1,0 +1,18 @@
+.landing_img{
+    margin-left: 800px;
+    /* Set it to right side */
+    width: 400px;
+    /* reduce size */
+}
+body {
+    font-family: 'Rubik Distressed', sans-serif;
+}
+
+h1{
+    font-family: 'Rubik Distressed', sans-serif;
+    /* Apply to headings */
+    color: rgba(34, 78, 76, 255);
+}
+span{
+    color: #ac9b82;
+}
