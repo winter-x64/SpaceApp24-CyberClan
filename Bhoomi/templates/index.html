@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web GIS Application with Search</title>
+    <title>BhoomiMap</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -13,19 +13,51 @@
       href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
     />
 
-    <link rel="stylesheet" href="./styles.css">
-
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
   </head>
   <body>
     <!-- <h1>Welcome to Your Web GIS Application</h1> -->
     <div class="container">
-      <h1 id="main"><span id="span1">Bhoomi</span> <span id="span2">map</span></h1>
-      <a href="#"> <img src="../Images/navbar/Frame (2).png" alt="" /></a>
-      <a href="#"> <img src="../Images/navbar/Frame (3).png" alt="" /> </a>
-      <a href="#"> <img src="../Images/navbar/Frame (4).png" alt="" /> </a>
-      <a href="#"> <img src="../Images/navbar/Frame (5).png" alt="" /> </a>
-      <a href="#"><img src="../Images/navbar/Frame (6).png" alt="thunderstorm"/></a>
-      <a href="#"> <img src="../Images/navbar/Frame (7).png" alt="search" /></a>
+      <h1 id="main">
+        <span id="span1">Bhoomi</span> <span id="span2">map</span>
+      </h1>
+      <a href="#">
+        <img
+          src="{{ url_for('static', filename='Images/navbar/Frame (2).png') }}"
+          alt="Example Image"
+        />
+      </a>
+      <a href="#">
+        <img
+          src="{{ url_for('static', filename='Images/navbar/Frame (3).png') }}"
+          alt=""
+        />
+      </a>
+      <a href="#">
+        <img
+          src="{{ url_for('static', filename='Images/navbar/Frame (4).png') }}"
+          alt=""
+        />
+      </a>
+      <a href="#">
+        <img
+          src="{{ url_for('static', filename='Images/navbar/Frame (5).png') }}"
+          alt=""
+        />
+      </a>
+      <a href="#"
+        ><img
+          src="{{ url_for('static', filename='Images/navbar/Frame (6).png') }}"
+          alt="thunderstorm"
+      /></a>
+      <a href="#">
+        <img
+          src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
+          alt="search"
+      /></a>
     </div>
     <div id="map"></div>
 
@@ -75,12 +107,13 @@
         .addTo(map);
     </script>
     <footer class="footer">
-                <h5>ABOUT US</h5>
-                <h5>CONCEPT</h5>
-                <h5>PUBLICATIONS</h5>
-                <h5>CONSUMER POLICY</h5>
-            <div class="footer-bottom">© Bhoomi Map</div>
-        </div>
+      <div>
+        <h5>ABOUT US</h5>
+        <h5>CONCEPT</h5>
+        <h5>PUBLICATIONS</h5>
+        <h5>CONSUMER POLICY</h5>
+        <div class="footer-bottom">© Bhoomi Map</div>
+      </div>
     </footer>
   </body>
 </html>
