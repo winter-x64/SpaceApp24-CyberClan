@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web GIS Application with Search</title>
+    <title>BhoomiMap</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -13,74 +13,66 @@
       href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
     />
 
-    <link rel="stylesheet" href="./styles.css">
-
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
   </head>
   <body>
     <!-- <h1>Welcome to Your Web GIS Application</h1> -->
     <div class="container">
-      <h1 id="main"><span id="span1">Bhoomi</span> <span id="span2">map</span></h1>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (2).png" alt="Menu" /></a>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (3).png" alt="Layer" /> </a>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (4).png" alt="Gallery" /> </a>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (5).png" alt="Location" /> </a>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (6).png" alt="thunderstorm"/></a>
-      <a href="#"> <img class="iconsimg" src="../Images/navbar/Frame (7).png" alt="search" /></a>
+      <h1 id="main">
+        <span id="span1">Bhoomi</span> <span id="span2">map</span>
+      </h1>
+      <a href="#">
+        <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (2).png') }}"
+          alt="MenuExample Image"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (3).png') }}"
+          alt="Layer"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (4).png') }}"
+          alt="Gallery"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (5).png') }}"
+          alt="Location"
+        />
+      </a>
+      <a href="#"
+        > <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (6).png') }}"
+          alt="thunderstorm"
+      /></a>
+      <a href="#">
+        <img
+          class="iconsimg" src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
+          alt="search"
+      /></a>
     </div>
     <div id="map"></div>
 
+    <footer class="footer">
+      <div>
+        <h5>ABOUT US</h5>
+        <h5>CONCEPT</h5>
+        <h5>PUBLICATIONS</h5>
+        <h5>CONSUMER POLICY</h5>
+        <div class="footer-bottom">© Bhoomi Map</div>
+      </div>
+    </footer>
     <!-- Leaflet and plugins -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
-    <script>
-      // Initialize the map
-      var map = L.map("map").setView([37.7749, -122.4194], 12);
-
-      // Load and display the OpenStreetMap tiles
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
-
-      // Add the map markers from Python/Flask
-      var locations = [];
-
-      // Store the markers for easy access later
-      var markers = [];
-
-      locations.forEach(function (loc) {
-        var marker = L.marker(loc.coords).addTo(map).bindPopup(loc.name);
-        markers.push(marker); // Add to markers array
-      });
-
-      // Add a geocoder (search bar)
-      var geocoder = L.Control.geocoder({
-        defaultMarkGeocode: false,
-      })
-        .on("markgeocode", function (e) {
-          // Remove existing search markers
-          markers.forEach((marker) => map.removeLayer(marker));
-
-          // Get the location's coordinates and add a marker
-          var latLng = e.geocode.center;
-          var marker = L.marker(latLng)
-            .addTo(map)
-            .bindPopup(e.geocode.name)
-            .openPopup();
-
-          // Center the map on the searched location
-          map.setView(latLng, 15);
-        })
-        .addTo(map);
-    </script>
-    <footer class="footer">
-                <h5>ABOUT US</h5>
-                <h5>CONCEPT</h5>
-                <h5>PUBLICATIONS</h5>
-                <h5>CONSUMER POLICY</h5>
-            <div class="footer-bottom">© Bhoomi Map</div>
-        </div>
-    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>

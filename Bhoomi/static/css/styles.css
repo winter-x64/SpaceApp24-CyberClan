@@ -31,10 +31,26 @@ img {
     margin-right: 10px;
 }
 
+<<<<<<< HEAD:Bhoomi/templates/styles.css
 .iconsimg{
     width: 45px;
 }
 
+=======
+/* Image styles */
+.container a img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.container a img:hover {
+  transform: scale(1.1);
+}
+
+
+>>>>>>> 352d144c2da151d71fb7fb386caa74645f0f54fd:Bhoomi/static/css/styles.css
 .footer {
     height: 100px;
     max-width: 1700px;
@@ -101,7 +117,6 @@ img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* Allows wrapping to ensure responsiveness */
     padding-top: 20px;
     gap: 10px;
     color: #ffffff;
@@ -111,17 +126,14 @@ img {
 
 .footer h5 {
     flex: 1;
-    /* Distribute space equally between the <h5> elements */
     text-align: center;
 }
 
 .footer-bottom {
     width: 100%;
-    /* Make sure it takes full width */
     text-align: center;
     font-size: large;
     border-top: 2px solid #454d5e;
     padding-top: 20px;
     margin-top: 20px;
-    /* Creates some spacing between h5 and footer bottom */
 }
