@@ -1,8 +1,9 @@
 #main{
-    padding: 10px;
-    background-color: transparent;
-    border-radius: 0%;
+    padding: 0px;
+    margin: 0px;
     margin-left: 10px;
+    background-color: transparent;
+    font-size: 20px;
 }
 body{
     background-color:transparent;
@@ -26,11 +27,16 @@ body{
 }
 
 img {
-    margin-top: 10px;
+    margin-top: 0px;
     margin-right: 10px;
 }
 
+.iconsimg{
+    width: 45px;
+}
+
 .footer {
+    height: 100px;
     max-width: 1700px;
     margin: 0 auto;
     padding: 40px 20px;
