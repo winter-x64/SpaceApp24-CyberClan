@@ -1,5 +1,5 @@
 import folium
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
@@ -21,9 +21,10 @@ def index():
     return render_template("index.html")
 
 
+# Create a route to serve the map.html file
 @app.route("/map")
-def maps():
-    return render_template("map.html")
+def map_view():
+    return send_from_directory("templates", "map.html")
 
 
 if __name__ == "__main__":
