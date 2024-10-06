@@ -16,7 +16,7 @@ def main_app() -> Flask:
         folium_map = folium.Map(location=start_coords, zoom_start=12)
 
         # Save the map to an HTML file
-        folium_map.save(outfile="templates/map.html")
+        folium_map.save("Bhoomi/templates/map.html")
 
         return render_template(template_name_or_list="index.html")
 
