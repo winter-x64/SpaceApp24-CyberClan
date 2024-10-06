@@ -14,7 +14,133 @@ Home Page:
 map view:
 ![alt text](<Image/Screenshot 2024-10-06 214636.png>)
 
-instalation:
-install python and using `pip install -r requirements.txt` or poetry install to install all the dependencies.
+### Setting Up the Development Environment
 
-run the server using `python main.py `
+1. Fork the repository on GitHub.
+
+2. Clone your forked repository to your local machine:
+
+   ```shell
+   git clone https://github.com/<your-name>/SpaceApp24-CyberClan.git
+   ```
+
+   for example:
+
+   ```shell
+   git clone https://github.com/winter-x64/SpaceApp24-CyberClan.git
+   ```
+
+3. Create a virtual environment and install the project dependencies:
+
+   - In the project directory
+
+     ```shell
+     cd EventManager
+     ```
+
+   - Create a virtual environment
+
+     For **Windows** use :
+
+     ```shell
+     python -m venv .venv
+     ```
+
+     For **Mac** or **Linux use** :
+
+     ```shell
+     python3 -m venv .venv
+     ```
+
+   - Activate the environment :
+
+     For **Windows** use :
+
+     ```shell
+     .\.venv\Scripts\Activate.ps1
+     ```
+
+     For **Mac** or **Linux use** :
+
+     ```shell
+     source .venv/bin/activate
+     ```
+
+   - Install the project dependencies
+
+     For **Windows** use :
+
+     ```shell
+     pip install -r requirements.txt
+     ```
+
+     For **Mac** or **Linux use** :
+
+     ```shell
+     pip3 install -r requirements.txt
+     ```
+
+5. Run the project
+
+   - For **Windows** use :
+
+     ```shell
+     python main.py
+     ```
+
+   - For **Mac** or **Linux use** :
+
+     ```shell
+     python3 main.py
+     ```
+  
+
+  ### If you are using Poetry:
+  1. Fork the repository on GitHub.
+
+  2. Clone your forked repository to your local machine:
+
+   ```shell
+   git clone https://github.com/<your-name>/SpaceApp24-CyberClan.git
+   ```
+
+   for example:
+
+   ```shell
+   git clone https://github.com/winter-x64/SpaceApp24-CyberClan.git
+   ```
+
+3. Create a virtual environment and install the project dependencies:
+
+   - In the project directory
+
+     ```shell
+     cd SpaceApp24-CyberClan
+     ```
+
+   - Create a virtual environment
+
+     ```shell
+     poetry install
+     ```
+
+   - Create a virtual environment & activate it:
+
+     ```shell
+     poetry shell
+     ```
+
+4. Run the project
+
+   - For **Windows** use :
+
+     ```shell
+     python main.py
+     ```
+
+   - For **Mac** or **Linux use** :
+
+     ```shell
+     python3 main.py
+     ```
+  
