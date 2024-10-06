@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BhoomiMap</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/landing.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
 </head>
 <body>
     <div class="loader">
@@ -23,9 +23,9 @@
         <div class="content">
             <h1>Bhoomi <span>map</span></h1>
             <p class="tagline">Mapping Earth, Connecting Worlds</p>
-            <button class="get-started"><a href="/map" target="_blank">Get Started</button></a>
+            <button class="get-started"><a href="/map" target="_blank">Get Started</a></button>
         </div>
-        <img class="landing_img" src="../static/Images/landingpage/landingpage.png" alt="Bhoomi">
+        <img class="landing_img" src="{{ url_for('static', filename='Images/landingpage/landingpage.png') }}" alt="Bhoomi">
     </main>
     <script>
         window.addEventListener('load', function() {
