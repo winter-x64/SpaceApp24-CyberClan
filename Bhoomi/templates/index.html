@@ -12,7 +12,6 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
     />
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/styles.css') }}"
@@ -63,57 +62,24 @@
           class="iconsimg"
           src="{{ url_for('static', filename='Images/navbar/Frame (6).png') }}"
           alt="thunderstorm"
+          id="weatherIcon"
         />
       </a>
-      <!-- Search Icon -->
-      <!-- <div class="search-container">
-        <input
-          type="text"
-          placeholder="Search..."
-          class="search-bar"
-          id="searchInput"
-        />
-        <a href="#" class="search-icon" onclick="toggleSearch()">
-          <img
-            src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
-            alt="Search"
-          />
-        </a>
-      </div> -->
-      <div class="search-container">
-        <input
-          type="text"
-          placeholder="Search..."
-          class="search-bar"
-          id="searchInput"
-          style="display: none"
-          
-          Initially
-          hide
-          the
-          input
-          
-        />
-        <a
-          href="#"
-          class="search-icon"
-          id="searchButton"
-          onclick="toggleSearch()"
-        >
-          <img
-            src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
-            alt="Search"
-          />
-        </a>
-      </div>
     </div>
 
     <div id="map"></div>
 
+    <div class="weather-container" id="weatherContainer">
+      <h2>Weather Information</h2>
+      <p id="weatherDescription"></p>
+      <p id="temperature"></p>
+      <p id="location"></p>
+    </div>
+
     <footer>
       <div class="footer-content">
         <h3>BhoomiMap</h3>
-        <p>Your website's description or a brief tagline goes here.</p>
+        <p>Mapping Earth, Connecting Worlds</p>
         <ul class="socials">
           <li>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -134,9 +100,9 @@
       </div>
     </footer>
 
-    <!-- Leaflet and plugins -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>
+

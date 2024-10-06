@@ -38,14 +38,52 @@ var geocoder = L.Control.geocoder({
       .addTo(map)
       .bindPopup(e.geocode.name)
       .openPopup();
-
-    // Center the map on the searched location
     map.setView(latLng, 15);
+    getWeather(latLng.lat, latLng.lng);
   })
   .addTo(map);
 
 function toggleSearch() {
   const searchInput = document.getElementById("searchInput");
   searchInput.classList.toggle("active");
-  searchInput.focus(); // Automatically focus the input when it expands
+  searchInput.style.display = searchInput.style.display === "none" ? "block" : "none";
+  searchInput.focus(); 
 }
+
+const apiKey = "9353df61094eff4ccccbfac2002f04ed"
+
+
+function getWeather(lat, lon) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const weatherDescription = data.weather[0].description;
+      const temperature = data.main.temp;
+      const location = data.name;
+      document.getElementById("weatherDescription").textContent =
+        "Weather: " + weatherDescription;
+      document.getElementById("temperature").textContent =
+        "Temperature: " + temperature + "°C";
+      document.getElementById("location").textContent = "Location: " + location;
+
+      const iconCode = data.weather[0].icon;
+      const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+      document.getElementById("weatherIcon").src = iconUrl;
+      document.getElementById("weatherContainer").style.display = "block";
+    })
+    .catch((error) => console.log("Error fetching weather data: ", error));
+}
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      getWeather(lat, lon); 
+    });
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+window.onload = getLocation;
+
