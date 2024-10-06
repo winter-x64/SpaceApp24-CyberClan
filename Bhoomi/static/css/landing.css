@@ -61,6 +61,10 @@ h1 span {
     color: #141615;
 }
 
+.tagline {
+    font-size: 1.5rem;
+}
+
 .get-started {
     background-color: #5fc528;
     color: #fff;
