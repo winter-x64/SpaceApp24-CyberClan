@@ -35,7 +35,7 @@ map view:
    - In the project directory
 
      ```shell
-     cd EventManager
+     cd SpaceApp24-CyberClan
      ```
 
    - Create a virtual environment
