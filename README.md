@@ -8,7 +8,7 @@ The system will also provide real-time data updates, ensuring that users have ac
 
 > Project Demo Link [click here](https://drive.google.com/file/d/1va_xRSW-t9qvGJKc5uu3DwMlShPGhDgb/view?usp=sharing)
 
-## Sceenshots:
+## Screenshots:
 Home Page:
 ![alt text](Image/image1.png)
 map view:
