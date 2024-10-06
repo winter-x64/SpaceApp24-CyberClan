@@ -1,9 +1,13 @@
-.landing_img{
-    margin-left: 800px;
-    /* Set it to right side */
-    width: 400px;
-    /* reduce size */
+body {
+    background-color: #fcd8a8;
 }
+.landing_img {
+    float: right;
+    margin-right: 10;/* Ensure no margin on the right */
+    display: block;/* Ensures it's treated as a block element */
+    max-width: 400px;/* To keep it responsive */
+}
+
 body {
     font-family: 'Rubik Distressed', sans-serif;
 }
