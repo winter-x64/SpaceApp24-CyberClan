@@ -43,3 +43,9 @@ var geocoder = L.Control.geocoder({
     map.setView(latLng, 15);
   })
   .addTo(map);
+
+function toggleSearch() {
+  const searchInput = document.getElementById("searchInput");
+  searchInput.classList.toggle("active");
+  searchInput.focus(); // Automatically focus the input when it expands
+}

@@ -1,34 +1,34 @@
-#main{
-    padding: 0px;
-    margin: 0px;
-    margin-left: 10px;
-    background-color: transparent;
-    font-size: 20px;
+#main {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  background-color: transparent;
+  font-size: 20px;
 }
-body{
-    background-color:transparent;
+body {
+  background-color: transparent;
 }
 #map {
-    width: 100%;
-    height: 600px;
+  width: 100%;
+  height: 600px;
 }
 
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #span1 {
-    color: blue;
+  color: blue;
 }
 
 #span2 {
-    color: rgb(94, 93, 93);
+  color: rgb(94, 93, 93);
 }
 
 img {
-    margin-top: 0px;
-    margin-right: 10px;
+  margin-top: 0px;
+  margin-right: 10px;
 }
 
 /* Image styles */
@@ -43,29 +43,99 @@ img {
   transform: scale(1.1);
 }
 
-.footer {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgba(33, 32, 32, 255);
-    color: white;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center; /* Center the content horizontally */
-    border-top: 2px solid #454d5e; /* Add a line at the top of the footer */
-    display: flex;
-    justify-content: center; /* Center the footer content horizontally */
-    align-items: center; /* Align items vertically in the center */
-    flex-wrap: wrap; /* Wrap items if they don't fit in one line */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
 }
 
-.footer h5 {
-    margin: 0 20px; /* Add margin between the h5 elements */
-    text-align: center; /* Center the text inside each h5 */
-    flex-basis: 100px; /* Optional: Define a base width for each h5 */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-content h3,
+.footer-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.socials li {
+  display: inline-block;
+}
+
+.socials li a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.socials li a:hover {
+  color: #4caf50;
 }
 
 .footer-bottom {
-    text-align: center;
-    font-size: 10px;
-    margin-top: 10px;
-    width: 100%;
+  font-size: 12px;
+  margin-top: 10px;
+}
+/* .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+} */
+.search-container {
+  position: relative; /* For positioning the search input */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.search-bar {
+  padding: 10px 40px 10px 10px; /* Top, Right, Bottom, Left padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 0; /* Start with 0 width */
+  opacity: 0; /* Initially hidden */
+  transition: width 0.4s ease, opacity 0.4s ease; /* Smooth transition */
+  position: absolute; /* Position it relative to the container */
+  left: 60px; /* Adjust position as needed */
+  visibility: hidden; /* Hide it visually */
+  font-size: 14px; /* Font size */
+  outline: none; /* Remove outline */
+  background-color: #fff; /* Background color */
+}
+
+.search-bar:focus {
+  border-color: #ae6ff2; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(176, 110, 209, 0.5); /* Add a shadow effect on focus */
+}
+
+.search-icon {
+  cursor: pointer; /* Change cursor to pointer */
+  width: 30px; /* Adjust icon size */
+  height: auto; /* Keep aspect ratio */
+}
+
+.search-bar.active {
+  width: 200px; /* Width when active */
+  opacity: 1; /* Make it visible */
+  visibility: visible; /* Ensure it is visible */
+  z-index: 1; /* Bring the search bar above other elements */
 }

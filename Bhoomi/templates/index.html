@@ -17,10 +17,14 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <!-- <h1>Welcome to Your Web GIS Application</h1> -->
-    <div class="container">
+    <!-- <div class="container">
       <h1 id="main">
         <span id="span1">Bhoomi</span> <span id="span2">map</span>
       </h1>
@@ -63,19 +67,125 @@
           class="iconsimg"
           src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
           alt="search"
-      /></a>
+      /></a> -->
+
+    <!-- Search Bar -->
+    <!-- <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-bar" />
+        <button class="search-button">Search</button>
+      </div>
+    </div> -->
+
+    <div class="container">
+      <h1 id="main">
+        <span id="span1">Bhoomi</span> <span id="span2">map</span>
+      </h1>
+
+      <a href="#">
+        <img
+          class="iconsimg"
+          src="{{ url_for('static', filename='Images/navbar/Frame (2).png') }}"
+          alt="MenuExample Image"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg"
+          src="{{ url_for('static', filename='Images/navbar/Frame (3).png') }}"
+          alt="Layer"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg"
+          src="{{ url_for('static', filename='Images/navbar/Frame (4).png') }}"
+          alt="Gallery"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg"
+          src="{{ url_for('static', filename='Images/navbar/Frame (5).png') }}"
+          alt="Location"
+        />
+      </a>
+      <a href="#">
+        <img
+          class="iconsimg"
+          src="{{ url_for('static', filename='Images/navbar/Frame (6).png') }}"
+          alt="thunderstorm"
+        />
+      </a>
+      <!-- Search Icon -->
+      <!-- <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="search-bar"
+          id="searchInput"
+        />
+        <a href="#" class="search-icon" onclick="toggleSearch()">
+          <img
+            src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
+            alt="Search"
+          />
+        </a>
+      </div> -->
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="search-bar"
+          id="searchInput"
+          style="display: none"
+          <!--
+          Initially
+          hide
+          the
+          input
+          --
+        />
+        />
+        <a
+          href="#"
+          class="search-icon"
+          id="searchButton"
+          onclick="toggleSearch()"
+        >
+          <img
+            src="{{ url_for('static', filename='Images/navbar/Frame (7).png') }}"
+            alt="Search"
+          />
+        </a>
+      </div>
     </div>
+
     <div id="map"></div>
 
-    <footer class="footer">
+    <footer>
       <div class="footer-content">
-        <h5>ABOUT US</h5>
-        <h5>CONCEPT</h5>
-        <h5>PUBLICATIONS</h5>
-        <h5>CONSUMER POLICY</h5>
-        <div class="footer-bottom">© Bhoomi Map</div>
+        <h3>BhoomiMap</h3>
+        <p>Your website's description or a brief tagline goes here.</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 BhoomiMap. Designed by @CyberClan</p>
       </div>
     </footer>
+
     <!-- Leaflet and plugins -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
