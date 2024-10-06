@@ -12,10 +12,46 @@
         <div class="earth"></div>
         <div class="loader-text">Loading...</div>
     </div>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <div class="team-grid">
+            <div class="team-member" id="member1">
+                <img src="{{ url_for('static', filename='Images/team/Soumya.jpeg') }}" alt="Team Member 2">
+                <h3>Soumya Annie Thomas</h3>
+                <p>Email: <a href="mailto:soumyaannie07@gmail.com">soumyaannie07@gmail.com</a></p>
+            </div>
+            <div class="team-member" id="member2">
+                <img src="{{ url_for('static', filename='Images/team/Akhil.jpeg') }}" alt="Team Member 1">
+                <h3>Akhil B Xavier</h3>
+                <p>Email: <a href="mailto:akhil.b.xavier3247@gmail.com">akhil.b.xavier3247@gmail.com</a></p>
+            </div>
+            <div class="go-back-container">
+                <button class="go-back-btn" onclick="window.history.back();">Go Back Home</button>
+            </div>
+            <div class="team-member" id="member3">
+                <img src="{{ url_for('static', filename='Images/team/Alvin.webp') }}" alt="Team Member 3">
+                <h3>Alvin Dennis</h3>
+                <p>Email: <a href="mailto:alvindennis80@gmail.com">alvindennis80@gmail.com</a></p>
+            </div>
+            <div class="team-member" id="member4">
+                <img src="{{ url_for('static', filename='Images/team/Haritha.jpeg') }}" alt="Team Member 4">
+                <h3>Haritha Gopi</h3>
+                <p>Email: <a href="mailto:harithadev345@gmail.com">harithadev345@gmail.com</a></p>
+            </div>
+            <div class="team-member" id="member5">
+                <img src="{{ url_for('static', filename='Images/team/Abhinav.jpeg') }}" alt="Team Member 5">
+                <h3>Abhinav Krishna KA</h3>
+                <p>Email: <a href="mailto:abhinavkrishnaks74@gmail.com">abhinavkrishnaks74@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
     <script>
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader').style.display = 'none';
-            }, 3000);});
+            }, 3000);
+        });
     </script>
 </body>
+</html>
+
