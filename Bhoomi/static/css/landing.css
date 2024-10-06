@@ -1,26 +1,133 @@
 body {
-    background-color: #fcd8a8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fbda9d;
+    color: #333;
 }
+
+nav {
+    background-color: #ffffff00;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Rubik Distressed', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #34b317;
+}
+
+h1 span {
+    color: #141615;
+}
+
+.get-started {
+    background-color: #5fc528;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #34b317;
+}
+
 .landing_img {
     float: right;
     margin-right: 10;/* Ensure no margin on the right */
     display: block;/* Ensures it's treated as a block element */
-    max-width: 400px;/* To keep it responsive */
+    max-width: 400px;
+    height: fit-content;
 }
 
-body {
-    font-family: 'Rubik Distressed', sans-serif;
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-h1{
-    font-family: 'Rubik Distressed', sans-serif;
-    /* Apply to headings */
-    color: #144444;
+.loader-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #4a7c59;
+    font-weight: bold;
+    text-align: center;
 }
-span{
-    color: #ac9b82;
+
+.earth {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/240px-The_Blue_Marble_%28remastered%29.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset -30px 0 rgba(0, 0, 0, 0.2);
+    animation: spin 4s linear infinite;
 }
-.getstarted{
-    background-color: #268e1e;
-    color: white;
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
 }
